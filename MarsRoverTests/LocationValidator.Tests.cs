@@ -20,7 +20,7 @@ namespace MarsRover.Tests
         [InlineDataWithAutoMoq(5, 5, true)]
         [InlineDataWithAutoMoq(3, 4, true)]
         [InlineDataWithAutoMoq(0, 0, true)]
-        public void GivenInBoundaryLocation_ValidateShouldReturnExpected(int xCoordinate, int yCoordinate,bool expected, [Frozen] Mock<PlateuBase> plateu, LocationValidator sut)
+        public void GivenLocation_ValidateShouldReturnExpected(int xCoordinate, int yCoordinate,bool expected, [Frozen] Mock<PlateuBase> plateu, LocationValidator sut)
         {
             plateu.SetupGet(p => p.Size).Returns(new Size(5, 5));
 
