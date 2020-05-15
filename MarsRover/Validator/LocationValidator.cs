@@ -13,8 +13,8 @@ namespace MarsRover
         }
         public bool Validate(Location location)
         {
-            var isXValid = location.X >= 0 && location.X < this.plateu.Size.Width;
-            var isYValid = location.Y >= 0 && location.Y < this.plateu.Size.Height;
+            var isXValid = location.X >= 0 && location.X <= this.plateu.Size.Width;
+            var isYValid = location.Y >= 0 && location.Y <= this.plateu.Size.Height;
             return isXValid && isYValid;
         }
     }

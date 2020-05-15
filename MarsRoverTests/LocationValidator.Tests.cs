@@ -1,4 +1,5 @@
 ﻿using AutoFixture.Xunit2;
+using FluentAssertions;
 using Moq;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,44 +10,23 @@ namespace MarsRover.Tests
 {
     public class LocationValidatorTests
     {
-        [Theory, AutoMock]
-        public void GivenOutOfBoundaryLocation_ValidateShouldReturnFalse([Frozen]Mock<PlateuBase> plateu, Location location, LocationValidator sut)
+
+
+        [Theory]
+        [InlineDataWithAutoMoq(5, 6, false)]
+        [InlineDataWithAutoMoq(6, 5, false)]
+        [InlineDataWithAutoMoq(-1, 0, false)]
+        [InlineDataWithAutoMoq(2, -1, false)]
+        [InlineDataWithAutoMoq(5, 5, true)]
+        [InlineDataWithAutoMoq(3, 4, true)]
+        [InlineDataWithAutoMoq(0, 0, true)]
+        public void GivenInBoundaryLocation_ValidateShouldReturnExpected(int xCoordinate, int yCoordinate,bool expected, [Frozen] Mock<PlateuBase> plateu, LocationValidator sut)
         {
             plateu.SetupGet(p => p.Size).Returns(new Size(5, 5));
 
-            location = new Location(5, 6);
-            Assert.False(sut.Validate(location));
+            var actual = sut.Validate(new Location(xCoordinate, yCoordinate));
 
-            location = new Location(6, 5);
-            Assert.False(sut.Validate(location));
-
-            location = new Location(5, 4);
-            Assert.False(sut.Validate(location));
-
-            location = new Location(4, 5);
-            Assert.False(sut.Validate(location));
-
-            location = new Location(-1, 0);
-            Assert.False(sut.Validate(location));
-
-            location = new Location(2, -1);
-            Assert.False(sut.Validate(location));
-        }
-
-
-        [Theory, AutoMock]
-        public void GivenInBoundaryLocation_ValidateShouldReturnTrue([Frozen]Mock<PlateuBase> plateu, Location location, LocationValidator sut)
-        {
-            plateu.SetupGet(p => p.Size).Returns(new Size(5, 5));
-
-            location = new Location(4, 4);
-            Assert.True(sut.Validate(location));
-
-            location = new Location(3, 4);
-            Assert.True(sut.Validate(location));
-
-            location = new Location(0, 0);
-            Assert.True(sut.Validate(location));
+            actual.Should().Be(expected);
         }
     }
 
