@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MarsRover
 {
-    [ExcludeFromCodeCoverage]
+
     public class Location
     {
         public int X { get; set; }

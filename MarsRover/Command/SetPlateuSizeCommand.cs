@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MarsRover
 {
-    [ExcludeFromCodeCoverage]
+   
     public class SetPlateuSizeCommand : ISetPlateuSizeCommand
     {
         public Size Size { get; set; }

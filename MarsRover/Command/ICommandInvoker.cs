@@ -6,7 +6,7 @@ namespace MarsRover
 {
     public interface ICommandInvoker
     {
-        void SetPlateu(Plateu plateu);
+        void SetPlateu(PlateuBase plateu);
         void SetRovers(IList<IRover> rovers);
         void SetCommands(IEnumerable<ICommand> commands);
         void InvokeCommands();

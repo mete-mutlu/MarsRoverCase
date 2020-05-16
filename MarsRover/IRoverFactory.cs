@@ -4,9 +4,8 @@ using System.Text;
 
 namespace MarsRover
 {
-    public interface ICommandManager
+    public interface IRoverFactory
     {
-        void Execute(string input);
-        string GetOutput();
+        IRover CreateRover();
     }
 }

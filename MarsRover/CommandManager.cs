@@ -5,8 +5,17 @@ using System.Text;
 
 namespace MarsRover
 {
-    [ExcludeFromCodeCoverage]
-    public class CommandManager
+
+    public class CommandManager : ICommandManager
     {
+        public void Execute(string input)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetOutput()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

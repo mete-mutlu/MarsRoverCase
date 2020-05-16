@@ -1,26 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace MarsRover
 {
-    [ExcludeFromCodeCoverage]
-    public class CommandInvoker
+ 
+    public class CommandInvoker : ICommandInvoker
     {
-        private readonly List<ICommand> commands;
-        private ICommand command;
+        private  IEnumerable<ICommand> commands;
+        private PlateuBase plateu;
+        private readonly IRoverFactory roverFactory;
+        private readonly IDictionary<CommandType, Action<ICommand>> recieverMethodDictionary;
+        private IList<IRover> rovers;
 
-        public CommandInvoker() { 
-            commands = new List<ICommand>();
+        public CommandInvoker(IRoverFactory roverFactory) {
+            this.roverFactory = roverFactory;
+            recieverMethodDictionary = new Dictionary<CommandType, Action<ICommand>>
+            {
+                {CommandType.SetPlateauSize, SetReceiversOnSetPletauSizeCommand},
+                {CommandType.Land, SetReceiversOnLandingCommand},
+                {CommandType.Move, SetReceiversOnMovementCommand}
+            };
         }
 
-        public void SetCommand(ICommand command) => this.command = command;
 
-        public void Invoke()
+        public void SetPlateu(PlateuBase plateu)
         {
-            commands.Add(command);
-            command.Execute();
+            this.plateu = plateu;
+        }
+
+        public void SetRovers(IList<IRover> rovers)
+        {
+            this.rovers = rovers;
+        }
+
+        public void SetCommands(IEnumerable<ICommand> commands)
+        {
+            this.commands = commands;
+        }
+
+        public void InvokeCommands()
+        {
+            foreach (var command in commands)
+            {
+                SetReceivers(command);
+                command.Execute();
+            }
+        }
+
+        private void SetReceivers(ICommand command)
+        {
+            recieverMethodDictionary[command.CommandType].Invoke(command);
+        }
+
+        private void SetReceiversOnSetPletauSizeCommand(ICommand command)
+        {
+            var setPlateuSizeCommand = (ISetPlateuSizeCommand)command;
+            setPlateuSizeCommand.SetReceiver(plateu);
+        }
+
+        private void SetReceiversOnLandingCommand(ICommand command)
+        {
+            var landingCommand = (ILandingCommand)command;
+            var rover = roverFactory.CreateRover();
+            rovers.Add(rover);
+            landingCommand.SetReceivers(rover, plateu);
+        }
+
+        private void SetReceiversOnMovementCommand(ICommand command)
+        {
+            var movementCommand = (IMovementCommand)command;
+            var last = rovers[rovers.Count - 1];
+            movementCommand.SetReceiver(last);
         }
     }
 }

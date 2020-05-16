@@ -3,7 +3,8 @@ using Microsoft.Extensions.Configuration;
 
 namespace MarsRover
 {
-    public class InvalidCommandException : Exception
+    [Serializable]
+    public class InvalidCommandException : System.Exception
     {
         
         public override string Message => "Invalid Command!";

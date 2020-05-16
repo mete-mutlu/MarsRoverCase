@@ -8,10 +8,9 @@ namespace MarsRover
     {
         Location Location { get; set; }
         Direction Direction { get; set; }
-
         void SetPlateuSize(PlateuBase plateu, Location location, Direction direction);
-        void Land(PlateuBase plateu, Location location, Direction direction);
+        void Land(ILocationValidator validator, PlateuBase plateu, Location location, Direction direction);
         void Move(IEnumerable<Movement> movements);
-        bool IsLanded();
+
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MarsRover
 {
-    [ExcludeFromCodeCoverage]
+    
     public class MovementCommand : IMovementCommand
     {
         public IList<Movement> Movements { get; private set; }

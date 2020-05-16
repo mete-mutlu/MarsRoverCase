@@ -1,3 +1,7 @@
+C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.csprojAssemblyReference.cache
+C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.AssemblyInfoInputs.cache
+C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.AssemblyInfo.cs
 C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp3.1\MarsRover.exe
 C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
@@ -109,10 +113,6 @@ C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp3.1\
 C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp3.1\MarsRover.dll
 C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\bin\Debug\netcoreapp3.1\MarsRover.pdb
-C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.csprojAssemblyReference.cache
-C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.csproj.CoreCompileInputs.cache
-C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.AssemblyInfoInputs.cache
-C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.AssemblyInfo.cs
 C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.csproj.CopyComplete
 C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.dll
 C:\Users\Matebook\source\repos\MarsRover\MarsRoverTests\obj\Debug\netcoreapp3.1\MarsRover.Tests.pdb
