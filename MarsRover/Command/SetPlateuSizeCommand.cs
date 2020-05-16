@@ -9,10 +9,7 @@ namespace MarsRover
     public class SetPlateuSizeCommand : ISetPlateuSizeCommand
     {
         public Size Size { get; set; }
-
-        public PlateuBase Plateu  { get; set; }
-
-
+        private PlateuBase plateu  { get; set; }
 
         public CommandType CommandType => this.CommandType;
 
@@ -23,12 +20,12 @@ namespace MarsRover
 
         public void SetReceiver(PlateuBase plateu)
         {
-            this.Plateu = plateu;
+            this.plateu = plateu;
         }
 
         public void Execute()
         {
-            Plateu.Size = this.Size;
+            plateu.Size = this.Size;
         }
     }
 }

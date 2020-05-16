@@ -21,4 +21,3 @@ C:\Users\Matebook\source\repos\MarsRover\MarsRover\obj\Debug\netcoreapp3.1\MarsR
 C:\Users\Matebook\source\repos\MarsRover\MarsRover\obj\Debug\netcoreapp3.1\MarsRover.dll
 C:\Users\Matebook\source\repos\MarsRover\MarsRover\obj\Debug\netcoreapp3.1\MarsRover.pdb
 C:\Users\Matebook\source\repos\MarsRover\MarsRover\obj\Debug\netcoreapp3.1\MarsRover.genruntimeconfig.cache
-C:\Users\Matebook\source\repos\MarsRover\MarsRover\obj\Debug\netcoreapp3.1\MarsRover.csprojAssemblyReference.cache
