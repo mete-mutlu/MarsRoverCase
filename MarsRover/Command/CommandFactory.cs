@@ -8,7 +8,7 @@ namespace MarsRover.Command
     {
         public ILandingCommand CreateLandingCommand(Location location, Direction direction)
         {
-            return new LandingCommand();
+            return new LandingCommand(location,direction);
         }
 
         public IMovementCommand CreateMovementCommand(IList<Movement> movements)

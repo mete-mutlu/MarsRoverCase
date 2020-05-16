@@ -28,29 +28,29 @@ namespace MarsRover.Tests.Command
 
         [Theory]
         [AutoMock]
-        
-        public void SetRecieverShouldNotThrowException([Frozen]Mock<PlateuBase> plateu,Size size)
+
+        public void SetRecieversShouldHaveRecievers([Frozen]Mock<PlateuBase> plateu, Size size)
         {
             plateu.Setup(x => x.Size).Returns(size);
-            SetPlateuSizeCommand sut = new SetPlateuSizeCommand(new Size(3,3)) ;
-            Action actual  = () => sut.SetReceiver(plateu.Object);
+            SetPlateuSizeCommand sut = new SetPlateuSizeCommand(new Size(3, 3));
+            Action actual = () => sut.SetReceiver(plateu.Object);
             actual.Should().NotThrow<Exception>();
         }
 
         [Theory]
         [AutoMock]
-        public void ShouldSetPlateuSize([Frozen]Mock<PlateuBase> plateu, Size size)
+        public void SetPletauShouldSetPlateuSize([Frozen]Mock<PlateuBase> plateu, Size size)
         {
             SetPlateuSizeCommand sut = new SetPlateuSizeCommand(size);
             sut.SetReceiver(plateu.Object);
             sut.Execute();
 
-            plateu.VerifySet(p=> p.Size = It.Is<Size>(p => p.Height == size.Height && p.Width == size.Width) ,Times.Once);
+            plateu.VerifySet(p => p.Size = It.Is<Size>(p => p.Height == size.Height && p.Width == size.Width), Times.Once);
         }
 
 
-       
 
-        
+
+
     }
 }

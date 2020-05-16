@@ -8,6 +8,6 @@ namespace MarsRover
     {
         Direction Direction { get; set; }
         Location Location { get; set; }
-        void SetReceivers(IRover aRover, PlateuBase aLandingSurface);
+        void SetReceivers(IRover rover, PlateuBase plateu);
     }
 }

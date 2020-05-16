@@ -10,19 +10,25 @@ namespace MarsRover
     {
         public Location Location { get; set; }
         public Direction Direction { get; set; }
-
         public CommandType CommandType => this.CommandType;
 
         private IRover rover;
         private PlateuBase plateu;
+
+        public LandingCommand(Location location, Direction direction)
+        {
+            this.Location = location;
+            this.Direction = direction;
+        }
         public void Execute()
         {
-            throw new NotImplementedException();
+            rover.Land(plateu, Location, Direction);
         }
 
-        public void SetReceivers(IRover aRover, PlateuBase aLandingSurface)
+        public void SetReceivers(IRover rover, PlateuBase plateu)
         {
-            throw new NotImplementedException();
+            this.rover = rover;
+            this.plateu = plateu;
         }
     }
 }
