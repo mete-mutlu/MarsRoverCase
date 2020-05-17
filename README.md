@@ -1,11 +1,11 @@
 # Mars Rover
-Implementation of a command pattern example in c# for Mars Rover case.
+Implementation of a command pattern example in c# for Mars Rover case. 
 
 ## Table Of Contents 
 - Case Description
 - Case Analysis
 - Class Diagrams
-- Tools
+- Tools and Technologies Used
 - License
 
 ## Case Description
@@ -86,6 +86,15 @@ Only recognized commands should be allowed(we can use regex). We should interpre
 ![](https://github.com/mete-mutlu/MarsRoverCase/blob/master/MarsRover/uml/ClassDiagram%202.jpg)
 
 
+## Tools and Technologies Used
+
+* Visual Studio 2019
+* .Net Core
+* Autofac
+* Moq
+* Autofixture
+* Fluent Assertions
+* Coverlet
 
 
 
