@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
 
-namespace MarsRover
+namespace MarsRover.Exception
 {
     [Serializable]
     public class InvalidCommandException : System.Exception

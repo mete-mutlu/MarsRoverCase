@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UvUR8sAvyPJ7mG0sJwtupDOLORIqs9l8sKMfOQSU0eiNgGDm5YeZ/eGycH3l0ySgarjnWlgUvvXc4eK4UMKP0Q==",
+  "dgSpecHash": "JXZ857LoE6MRy/bJ72T+1xy+e4viQag52Qz6B0pKk03G5NBnxOgSN/V1Dkkq2x8k3VTy8RSQjwpmm8JeRoIPUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matebook\\source\\repos\\MarsRover\\MarsRover\\MarsRover.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Matebook\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.4\\microsoft.extensions.configuration.3.1.4.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.4\\microsoft.extensions.configuration.abstractions.3.1.4.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\microsoft.extensions.configuration.commandline\\3.1.4\\microsoft.extensions.configuration.commandline.3.1.4.nupkg.sha512",

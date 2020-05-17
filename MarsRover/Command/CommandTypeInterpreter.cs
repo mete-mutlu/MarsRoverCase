@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MarsRover.Exception;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace MarsRover
+namespace MarsRover.Command
 {
     public class CommandTypeInterpreter : ICommandTypeInterpreter
     {

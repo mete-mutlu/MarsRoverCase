@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SxI1CD2ExqyGUGKasbgZ1Y74XeKTgcJ/kes3gm6SqKHE8ji0trYv68XUUJwGW3tixdhmd6DwfZ9tQDlkCHxrJw==",
+  "dgSpecHash": "d4YnJfhBz3DHqymVYDaEuNW9GSlofKWtsIiSb6ilIWi7caCtwrSSG4Slbz8UQCIYU67xzCN/Un8FZpkxa2Xtow==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matebook\\source\\repos\\MarsRover\\MarsRoverTests\\MarsRover.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Matebook\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\autofixture\\4.11.0\\autofixture.4.11.0.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\autofixture.automoq\\4.11.0\\autofixture.automoq.4.11.0.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\autofixture.xunit2\\4.11.0\\autofixture.xunit2.4.11.0.nupkg.sha512",
@@ -133,6 +134,7 @@
     "C:\\Users\\Matebook\\.nuget\\packages\\xunit.abstractions\\2.0.2\\xunit.abstractions.2.0.2.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\xunit.analyzers\\0.10.0\\xunit.analyzers.0.10.0.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\xunit.assert\\2.4.0\\xunit.assert.2.4.0.nupkg.sha512",
+    "C:\\Users\\Matebook\\.nuget\\packages\\xunit.autofac\\0.0.25\\xunit.autofac.0.0.25.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\xunit.core\\2.4.0\\xunit.core.2.4.0.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\xunit.extensibility.core\\2.4.0\\xunit.extensibility.core.2.4.0.nupkg.sha512",
     "C:\\Users\\Matebook\\.nuget\\packages\\xunit.extensibility.execution\\2.4.0\\xunit.extensibility.execution.2.4.0.nupkg.sha512",
@@ -145,6 +147,16 @@
       "warningLevel": 1,
       "message": "Castle.Core 4.0.0 depends on System.ComponentModel.TypeConverter (>= 4.0.1) but System.ComponentModel.TypeConverter 4.0.1 was not found. An approximate best match of System.ComponentModel.TypeConverter 4.1.0 was resolved.",
       "libraryId": "System.ComponentModel.TypeConverter",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'xunit.autofac 0.0.25' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "xunit.autofac",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

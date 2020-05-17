@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MarsRover.Domain;
 
-namespace MarsRover
+namespace MarsRover.Command
 {
     public interface ISetPlateuSizeCommand : ICommand
     {
         Size Size { get; }
-        void SetReceiver(PlateuBase plateu);
+        void SetReceiver(IPlateu plateu);
     }
 
 }

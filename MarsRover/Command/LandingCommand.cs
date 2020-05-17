@@ -1,19 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Text;
+﻿
 
-namespace MarsRover
+using MarsRover.Domain;
+using MarsRover.Validator;
+
+namespace MarsRover.Command
 {
   
     public class LandingCommand : ILandingCommand
     {
         public Location Location { get; set; }
         public Direction Direction { get; set; }
-        public CommandType CommandType => this.CommandType;
+        public CommandType CommandType { get; set; }
 
         private IRover rover;
-        private PlateuBase plateu;
+        private IPlateu plateu;
         private readonly ILocationValidator locationValidator;
 
         public LandingCommand(ILocationValidator locationValidator, Location location, Direction direction)
@@ -24,10 +24,10 @@ namespace MarsRover
         }
         public void Execute()
         {
-            rover.Land(this.locationValidator,plateu, Location, Direction);
+            rover.Land(plateu, Location, Direction);
         }
 
-        public void SetReceivers(IRover rover, PlateuBase plateu)
+        public void SetReceivers(IRover rover, IPlateu plateu)
         {
             this.rover = rover;
             this.plateu = plateu;

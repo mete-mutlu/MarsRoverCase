@@ -1,8 +1,9 @@
-﻿using System;
+﻿using MarsRover.Domain;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MarsRover
+namespace MarsRover.Command
 {
     public interface IMovementCommand : ICommand
     {

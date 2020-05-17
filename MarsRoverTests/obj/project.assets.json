@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Autofac/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Autofac.dll": {}
+        }
+      },
       "AutoFixture/4.11.0": {
         "type": "package",
         "dependencies": {
@@ -2359,6 +2368,19 @@
           "lib/netstandard2.0/xunit.assert.dll": {}
         }
       },
+      "xunit.autofac/0.0.25": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.3.0",
+          "xunit": "2.2.0"
+        },
+        "compile": {
+          "lib/net452/Xunit.Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/net452/Xunit.Autofac.dll": {}
+        }
+      },
       "xunit.core/2.4.0": {
         "type": "package",
         "dependencies": {
@@ -2411,6 +2433,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Autofac": "5.2.0",
           "Microsoft.Extensions.Configuration": "3.1.4",
           "Microsoft.Extensions.Configuration.CommandLine": "3.1.4",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "3.1.4",
@@ -2426,6 +2449,27 @@
     }
   },
   "libraries": {
+    "Autofac/5.2.0": {
+      "sha512": "V8dBH0dsv75uDzl7Sw+HkhKDPUw2eXnlMjcSVMH+tLo2s67MpTKGyDj1pDcpR+IF2u4YRs0s3/x7R88YJzIWvg==",
+      "type": "package",
+      "path": "autofac/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autofac.5.2.0.nupkg.sha512",
+        "autofac.nuspec",
+        "icon.png",
+        "lib/net461/Autofac.dll",
+        "lib/net461/Autofac.pdb",
+        "lib/net461/Autofac.xml",
+        "lib/netstandard2.0/Autofac.dll",
+        "lib/netstandard2.0/Autofac.pdb",
+        "lib/netstandard2.0/Autofac.xml",
+        "lib/netstandard2.1/Autofac.dll",
+        "lib/netstandard2.1/Autofac.pdb",
+        "lib/netstandard2.1/Autofac.xml"
+      ]
+    },
     "AutoFixture/4.11.0": {
       "sha512": "2C8JcuQU70dJQ8v5YVwkLPyd0pzpcXT5SF6z+K+FwoRb0HWpmLEaNHw1nYx+wpjgf35AyivF+p/7hPhWsBj0YQ==",
       "type": "package",
@@ -7718,6 +7762,18 @@
         "xunit.assert.nuspec"
       ]
     },
+    "xunit.autofac/0.0.25": {
+      "sha512": "JTNwchcjkTqIBLemSEWtDFY8DKRzpTUvhTHZv3b+a69xW4aMa0ou9lMoaFOUheofYsIvJYg+YM4EqleBaeacsg==",
+      "type": "package",
+      "path": "xunit.autofac/0.0.25",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Xunit.Autofac.dll",
+        "xunit.autofac.0.0.25.nupkg.sha512",
+        "xunit.autofac.nuspec"
+      ]
+    },
     "xunit.core/2.4.0": {
       "sha512": "BJ/O/tPEcHUCwQYuwqXoYccTMyw6B5dA6yh7WxWWBhKbjqTsG9RWL0nCQXM5yQYJwUuFzBkiXDPN1BO6UdBB4Q==",
       "type": "package",
@@ -7811,12 +7867,14 @@
       "AutoFixture >= 4.11.0",
       "AutoFixture.AutoMoq >= 4.11.0",
       "AutoFixture.Xunit2 >= 4.11.0",
+      "Autofac >= 5.2.0",
       "FluentAssertions >= 5.10.3",
       "MarsRover >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "coverlet.collector >= 1.0.1",
       "coverlet.msbuild >= 2.8.1",
       "xunit >= 2.4.0",
+      "xunit.autofac >= 0.0.25",
       "xunit.runner.visualstudio >= 2.4.0"
     ]
   },
@@ -7873,6 +7931,10 @@
             "target": "Package",
             "version": "[4.11.0, )"
           },
+          "Autofac": {
+            "target": "Package",
+            "version": "[5.2.0, )"
+          },
           "FluentAssertions": {
             "target": "Package",
             "version": "[5.10.3, )"
@@ -7894,6 +7956,10 @@
           "xunit": {
             "target": "Package",
             "version": "[2.4.0, )"
+          },
+          "xunit.autofac": {
+            "target": "Package",
+            "version": "[0.0.25, )"
           },
           "xunit.runner.visualstudio": {
             "target": "Package",
@@ -7926,6 +7992,16 @@
       "warningLevel": 1,
       "message": "Castle.Core 4.0.0 depends on System.ComponentModel.TypeConverter (>= 4.0.1) but System.ComponentModel.TypeConverter 4.0.1 was not found. An approximate best match of System.ComponentModel.TypeConverter 4.1.0 was resolved.",
       "libraryId": "System.ComponentModel.TypeConverter",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'xunit.autofac 0.0.25' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "xunit.autofac",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

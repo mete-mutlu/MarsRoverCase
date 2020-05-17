@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MarsRover.Domain;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MarsRover
+namespace MarsRover.Command
 {
     public interface ICommandInvoker
     {
-        void SetPlateu(PlateuBase plateu);
+        void SetPlateu(IPlateu plateu);
         void SetRovers(IList<IRover> rovers);
         void SetCommands(IEnumerable<ICommand> commands);
         void InvokeCommands();

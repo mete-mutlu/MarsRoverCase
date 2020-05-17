@@ -1,10 +1,12 @@
 ﻿using MarsRover.Command;
+using MarsRover.Domain;
+using MarsRover.Factory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MarsRover
+namespace MarsRover.Command
 {
     public class CommandMapper : ICommandMapper
     {

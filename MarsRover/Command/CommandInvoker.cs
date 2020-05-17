@@ -1,19 +1,22 @@
-﻿using System;
+﻿using MarsRover.Domain;
+using MarsRover.Factory;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
-namespace MarsRover
+namespace MarsRover.Command
 {
  
     public class CommandInvoker : ICommandInvoker
     {
-        private  IEnumerable<ICommand> commands;
-        private PlateuBase plateu;
-        private readonly IRoverFactory roverFactory;
-        private readonly IDictionary<CommandType, Action<ICommand>> recieverMethodDictionary;
         private IList<IRover> rovers;
+        private readonly IRoverFactory roverFactory;
+        private  IEnumerable<ICommand> commands;
+        private IPlateu plateu;
+        private readonly IDictionary<CommandType, Action<ICommand>> recieverMethodDictionary;
+     
 
         public CommandInvoker(IRoverFactory roverFactory) {
             this.roverFactory = roverFactory;
@@ -25,8 +28,7 @@ namespace MarsRover
             };
         }
 
-
-        public void SetPlateu(PlateuBase plateu)
+        public void SetPlateu(IPlateu plateu)
         {
             this.plateu = plateu;
         }

@@ -1,20 +1,17 @@
-﻿using System;
+﻿using MarsRover.Domain;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MarsRover
+namespace MarsRover.Validator
 {
-    public class LocationValidator : ILocationValidator
+    public  class LocationValidator : ILocationValidator
     {
-        private readonly PlateuBase plateu;
-        public LocationValidator(PlateuBase plateu)
+
+        public bool Validate(Location location, IPlateu plateu)
         {
-            this.plateu = plateu;
-        }
-        public bool Validate(Location location)
-        {
-            var isXValid = location.X >= 0 && location.X <= this.plateu.Size.Width;
-            var isYValid = location.Y >= 0 && location.Y <= this.plateu.Size.Height;
+            var isXValid = location.X >= 0 && location.X <= plateu?.Size?.Width;
+            var isYValid = location.Y >= 0 && location.Y <= plateu?.Size?.Height;
             return isXValid && isYValid;
         }
     }

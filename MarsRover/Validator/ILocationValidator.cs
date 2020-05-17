@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
-namespace MarsRover
+using MarsRover.Domain;
+
+namespace MarsRover.Validator
 {
     public interface ILocationValidator
     {
-        bool Validate(Location location);
+        bool Validate(Location location, IPlateu plateu);
+
+        
     }
 }
