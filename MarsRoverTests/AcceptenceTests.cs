@@ -38,7 +38,7 @@ namespace MarsRover.Tests
         public void GivenSetPlatueAndLandAndMoveCommands_ShouldLastRoverMoveAndReturnExpectedOutput(string commandInput, string expectedOutput)
         {
 
-            commandManager.Execute(commandInput);
+            commandManager.Execute(commandInput); 
             string actual = commandManager.GetOutput();
             actual.Should().BeEquivalentTo(expectedOutput);
         }
