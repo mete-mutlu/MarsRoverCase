@@ -22,7 +22,20 @@ namespace MarsRover.Tests
 
         [Theory]
         [InlineData("10 10\r\n4 7 W\r\n3 4 S\r\n5 6 E", "4 7 W\r\n3 4 S\r\n5 6 E")]
-        public void GivenSetPlatueAndLandCommands_ShouldReturnSameOutput(string commandInput,string expectedOutput)
+        public void GivenSetPlatueAndLandCommands_ShouldReturnExpectedOutput(string commandInput,string expectedOutput)
+        {
+
+            commandManager.Execute(commandInput);
+            string actual = commandManager.GetOutput();
+            actual.Should().BeEquivalentTo(expectedOutput);
+        }
+
+
+
+        [Theory]
+        [InlineData("10 10\r\n4 7 W\r\n3 4 S\r\n5 6 E\r\nMM", "4 7 W\r\n3 4 S\r\n7 6 E")]
+
+        public void GivenSetPlatueAndLandAndMoveCommands_ShouldLastRoverMoveAndReturnExpectedOutput(string commandInput, string expectedOutput)
         {
 
             commandManager.Execute(commandInput);
