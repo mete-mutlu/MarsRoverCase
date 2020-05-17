@@ -15,7 +15,7 @@ namespace MarsRover.Tests.UnitTests
         public void GeneratesOutputForAllRovers([Frozen]Mock<IEnumerable<IRover>> rovers,
             [Frozen]Mock<IRover> rover, OutputGenerator sut)
         {
-            sut.GetOutput(rovers.Object);
+            sut.GenerateOutput(rovers.Object);
             rover.VerifyGet(p => p.Location, Times.Exactly(rovers.Object.Count()));
             rover.VerifyGet(p => p.Direction, Times.Exactly(rovers.Object.Count()));
         }
@@ -33,7 +33,7 @@ namespace MarsRover.Tests.UnitTests
             rover.Setup(p => p.Direction).Returns(direction);
             rover.Setup(p => p.IsLanded()).Returns(isLanded);
 
-            var actual = sut.GetOutput(new List<IRover>() { rover.Object }.AsEnumerable());
+            var actual = sut.GenerateOutput(new List<IRover>() { rover.Object }.AsEnumerable());
 
             actual.Should().Be(expectedOutput);
 

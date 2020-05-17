@@ -1,5 +1,4 @@
 ﻿using MarsRover.Domain;
-using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -19,7 +18,7 @@ namespace MarsRover
                  {Direction.West, 'W'}
             };
         }
-        public string GetOutput(IEnumerable<IRover> rovers)
+        public string GenerateOutput(IEnumerable<IRover> rovers)
         {
             var output = new StringBuilder();
             foreach (var rover in rovers)

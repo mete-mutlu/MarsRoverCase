@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MarsRover.Domain
+﻿namespace MarsRover.Domain
 {
     public enum Movement
     {

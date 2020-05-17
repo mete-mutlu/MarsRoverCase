@@ -1,6 +1,5 @@
 ﻿using AutoFixture.Xunit2;
 using FluentAssertions;
-using FluentAssertions.Equivalency;
 using MarsRover.Command;
 using MarsRover.Domain;
 using MarsRover.Factory;
@@ -8,7 +7,6 @@ using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Xunit;
 
 namespace MarsRover.Tests.UnitTests.Command

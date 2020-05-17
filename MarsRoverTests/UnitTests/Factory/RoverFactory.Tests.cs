@@ -1,9 +1,6 @@
 ﻿using FluentAssertions;
 using MarsRover.Domain;
 using MarsRover.Factory;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace MarsRover.Tests.UnitTests.Factory

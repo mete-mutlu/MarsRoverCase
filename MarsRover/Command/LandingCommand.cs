@@ -1,6 +1,4 @@
-﻿
-
-using MarsRover.Domain;
+﻿using MarsRover.Domain;
 using MarsRover.Validator;
 
 namespace MarsRover.Command

@@ -5,8 +5,6 @@ using MarsRover.Domain;
 using MarsRover.Validator;
 using Moq;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace MarsRover.Tests.UnitTests.Command

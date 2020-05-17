@@ -1,10 +1,7 @@
 ﻿using MarsRover.Command;
 using MarsRover.Domain;
-using MarsRover.Factory;
 using MarsRover.Validator;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MarsRover.Factory
 {

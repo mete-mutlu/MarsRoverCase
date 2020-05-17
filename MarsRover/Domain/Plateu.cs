@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Text;
-
-namespace MarsRover.Domain
+﻿namespace MarsRover.Domain
 {
     public class Plateu : IPlateu
     {

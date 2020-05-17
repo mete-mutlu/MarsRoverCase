@@ -2,13 +2,10 @@
 using MarsRover.Factory;
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics.CodeAnalysis;
-using System.Text;
 
 namespace MarsRover.Command
 {
- 
+
     public class CommandInvoker : ICommandInvoker
     {
         private IList<IRover> rovers;

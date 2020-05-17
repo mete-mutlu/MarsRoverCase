@@ -1,14 +1,9 @@
-﻿using Xunit;
-using AutoFixture.Xunit2;
+﻿using FluentAssertions;
 using MarsRover.Command;
-using Moq;
-using MarsRover.Factory;
-using MarsRover.Validator;
-using FluentAssertions;
-using Castle.DynamicProxy.Generators;
-using System.Collections;
-using System.Collections.Generic;
 using MarsRover.Domain;
+using MarsRover.Factory;
+using System.Collections.Generic;
+using Xunit;
 
 namespace MarsRover.Tests.UnitTests.Factory
 {

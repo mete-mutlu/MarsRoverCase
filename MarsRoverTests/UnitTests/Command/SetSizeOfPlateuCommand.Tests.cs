@@ -2,13 +2,9 @@
 using FluentAssertions;
 using MarsRover.Command;
 using MarsRover.Domain;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities;
 using Moq;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
-using Xunit.Sdk;
 
 namespace MarsRover.Tests.UnitTests.Command
 {

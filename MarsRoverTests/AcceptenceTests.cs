@@ -1,10 +1,5 @@
 ﻿using Autofac;
 using FluentAssertions;
-using MarsRover.Command;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
 using System.Text;
 using Xunit;
 

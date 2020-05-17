@@ -1,9 +1,6 @@
 ﻿using MarsRover.Command;
 using MarsRover.Domain;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Text;
 
 namespace MarsRover
 {
@@ -36,7 +33,7 @@ namespace MarsRover
 
         public string GetOutput()
         {
-            return outputGenerator.GetOutput(rovers);
+            return outputGenerator.GenerateOutput(rovers);
         }
     }
 }

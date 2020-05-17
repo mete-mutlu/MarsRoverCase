@@ -3,9 +3,7 @@ using FluentAssertions;
 using MarsRover.Command;
 using MarsRover.Domain;
 using Moq;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace MarsRover.Tests.UnitTests
@@ -46,7 +44,7 @@ namespace MarsRover.Tests.UnitTests
         public void OnGetOutputShouldGetExpectedOutput([Frozen]Mock<IOutputGenerator> outputGenerator,
             string anyExpectedOutput, CommandManager sut)
         {
-            outputGenerator.Setup(p => p.GetOutput(It.IsAny<List<IRover>>())).Returns(anyExpectedOutput);
+            outputGenerator.Setup(p => p.GenerateOutput(It.IsAny<List<IRover>>())).Returns(anyExpectedOutput);
             var actual = sut.GetOutput();
             actual.Should().Be(anyExpectedOutput);
         }
