@@ -23,6 +23,7 @@ namespace MarsRover
                 commandManager.Execute(commandString);
                 var output = commandManager.GetOutput();
                 WriteToConsole(commandString, output);
+                Console.ReadKey();
             }
         }
       
