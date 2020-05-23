@@ -1,10 +1,12 @@
 # Mars Rover
-Implementation of a command pattern example in c# for Mars Rover case.
+Implementation of a command pattern example in c# for Mars Rover case. 
 
 ## Table Of Contents 
 - Case Description
 - Case Analysis
-- Class Diagram
+- Class Diagrams
+- Tools and Technologies Used
+- License
 
 ## Case Description
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is
@@ -68,7 +70,45 @@ Sets initial location and direction of the rover.
 Updates location or direction of the rover.
 
 ### Key Points
-We should allow only recognized commands(we can use regex). We should interpret command input lines into command objects. In general we can use dictionaries in order to avoid using switch case or if else statements. We can also delegates(Action or Func) in dictionaries as a return type to map command methods and movements.  
+Only recognized commands should be allowed(we can use regex). We should interpret command input lines into command objects. In general we can use dictionaries in order to avoid using switch case or if else statements. We can also delegates(Action or Func) in dictionaries as a return type to map command methods and movements.  
+
+## Class Diagrams
+
+#### Diagram 1
+
+![](https://github.com/mete-mutlu/MarsRoverCase/blob/master/MarsRover/uml/Class%20Diagram%201.jpg)
+
+
+
+
+#### Diagram 2
+
+![](https://github.com/mete-mutlu/MarsRoverCase/blob/master/MarsRover/uml/ClassDiagram%202.jpg)
+
+
+## Tools and Technologies Used
+
+* Visual Studio 2019
+* .Net Core
+* Autofac
+* Moq
+* Autofixture
+* Fluent Assertions
+* Coverlet
+
+
+
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+
+
+
+
+
+
 
 
 
